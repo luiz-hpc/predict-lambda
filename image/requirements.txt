@@ -1,0 +1,8 @@
+numpy
+pandas
+scikit-learn
+tensorflow-cpu
+xlrd
+openpyxl
+boto3
+s3fs
