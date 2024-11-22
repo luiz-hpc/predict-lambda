@@ -6,6 +6,8 @@ COPY requirements.txt ${LAMBDA_TASK_ROOT}
 # Install the specified packages
 RUN pip install -r requirements.txt
 
+ENV TZ=America/Sao_Paulo
+
 # Copy all files in ./src
 COPY src/* ${LAMBDA_TASK_ROOT}
 

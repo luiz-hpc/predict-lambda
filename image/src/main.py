@@ -26,7 +26,7 @@ def handler(event, _):
 
     forecast_step = step # how many *day* to forecast forward
 
-    y_full_df = pd.read_excel('s3://lstm-rw-bucket/DI1_settle.xlsx',names=['dates', 1/12, 3/12, 6/12, 1, 1.5, 2, 3, 5, 10])
+    y_full_df = pd.read_csv('s3://lstm-rw-bucket/DI1_settle.csv')
     y_full = y_full_df.to_numpy()
 
     matu = np.array([[1/12, 3/12, 6/12, 1, 1.5, 2, 3, 5, 10]])
